@@ -1,4 +1,4 @@
-"""DQN agents trained on Breakthrough by independent Q-learning."""
+"""Reinforcement learning connect 4: playing script"""
 
 from absl import app
 from absl import flags
@@ -13,24 +13,24 @@ from open_spiel.python.algorithms import random_agent
 FLAGS = flags.FLAGS
 
 # Training parameters
-flags.DEFINE_string("checkpoint_dir", "/tmp/dqn_test",
-                    "Directory to save/load the agent models.")
+flags.DEFINE_string("checkpoint_dir", "./checkpoint",
+                    "Directory to save/load the agent models.", short_name='d')
 flags.DEFINE_integer(
     "save_every", int(1e4),
-    "Episode frequency at which the DQN agent models are saved.")
+    "Episode frequency at which the DQN agent models are saved.", short_name='s')
 flags.DEFINE_integer("num_train_episodes", int(1e6),
-                     "Number of training episodes.")
+                     "Number of training episodes.", short_name='t')
 flags.DEFINE_integer(
     "eval_every", 1000,
-    "Episode frequency at which the DQN agents are evaluated.")
+    "Episode frequency at which the DQN agents are evaluated.", short_name='e')
 
 # DQN model hyper-parameters
 flags.DEFINE_list("hidden_layers_sizes", [64, 64],
-                  "Number of hidden units in the Q-Network MLP.")
+                  "Number of hidden units in the Q-Network MLP.", short_name='h')
 flags.DEFINE_integer("replay_buffer_capacity", int(1e5),
-                     "Size of the replay buffer.")
+                     "Size of the replay buffer.", short_name='r')
 flags.DEFINE_integer("batch_size", 32,
-                     "Number of transitions to sample at each learning step.")
+                     "Number of transitions to sample at each learning step.", short_name='b')
 
 
 def eval_against_opponent(env, agents, num_episodes):
