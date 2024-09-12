@@ -1,6 +1,6 @@
 # connect4_rl: a game of connect 4 with reinforcement learning
 
-> Authors: [Rafał Kucharski](https://github.com/dartespl) and [Marcin Dąbrowski](https://github.com/mardab)
+> Authors: [Paweł Fornalik](https://github.com/dartespl) and [Marcin Dąbrowski](https://github.com/mardab)
 
 ## Prerequisites
 * AVX2-capable CPU or CUDA-capable GPU
