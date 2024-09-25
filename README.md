@@ -47,3 +47,11 @@ Run `connect4_train.py` to train reinforcement model, then `connect4_train.py` t
 > Training results will be saved to chosen PATH
 > 
 > (remember to invoke `python connect4_train.py` with the same `-d PATH`)
+
+### Results
+![alt text](https://github.com/dartespl/connect4_rl/blob/main/evaluations.png?raw=true)
+Training has 30000 iterations.
+Evaluation "eval_won_against_bots" is % games won against bots which play randomly. There are 1000 games played on each evaluation.
+CON-9 hidden_layers_sizes = [64]
+CON-10 hidden_layers_sizes = [64, 64]
+CON-11 hidden_layers_sizes = [64, 64, 64]
